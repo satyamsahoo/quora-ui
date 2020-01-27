@@ -33,7 +33,7 @@ import { APIOptions } from '../app/helpers/http-helper.class';
 //const host = 'http://preprod.grocery.conaug.com';
 
 const protocol = 'http';
-const host = '35.209.15.72';
+const host = 'groceryapp.conaug.com';
 const port = '';
 const trailUrl = 'api';
 const payUrl = 'pay';

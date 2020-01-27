@@ -1,0 +1,122 @@
+// Make default navbar links display block at choosen breakpoint and adjust styles to fit...
+.teaLogo{
+    max-width:60px;
+}
+.teaNavbar{
+    border-bottom:1px solid #e2e6e9;
+}
+.teaNavbar .container-fluid{
+    padding-left:20px!important;
+    padding-right:20px!important;
+}
+.marginRight{
+    padding-right: 20px;
+}
+.marginRightHeart{   
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.form-control:focus{
+    outline: 0 !important;
+    border-color: initial;
+    box-shadow: none;
+}
+ .input-group {
+    width: 40%!important;
+    margin-left: 25%;
+}
+.menuLink a, input::placeholder {
+    color: #666666!important;
+    font-family: 'Montserrat'!important;
+    font-weight: bold!important;
+    font-size: 16px;
+}
+.form-control {
+    border-radius: 30px 0px 0px 30px !important;
+    padding-left: 30px;
+}
+.input-group-text{
+    border-radius: 0px 30px 30px 0px !important;
+    padding-right: 30px;
+}
+.menuLink a:hover{
+    color: #4CBB3B!important;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+.menuBar{
+    margin-left: 25px;
+}
+.fa-heart:hover,.fa-shopping-bag:hover,.fa-user:hover {
+    color: #4CBB3B;
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
+.fa-heart,.fa-shopping-bag,.fa-user,.fa-search {
+    color: #666666;
+}
+.navbar-dark .navbar-brand {
+    margin-left: 50px;
+}
+
+//Media Queries
+@media screen and (max-width:767px){
+    .input-group {
+        width: 40%!important;
+        margin-left:0%;
+    }     
+    .navbar-dark .navbar-brand {
+        margin-left: 0px;
+    }
+    .iconPadding{
+        padding-left: 21px;
+        padding-top: 20px;
+        display: table;
+        }
+
+        .iconUserPadding{
+   padding-bottom: 5px;
+    }
+        .iconPaddingHeart{
+        padding-top: 10px;    
+        }
+
+    .iconPadding{
+        padding-left: 21px;
+        padding-top: 20px;
+        }
+        .iconPaddingHeart{
+        padding-top: 10px;    
+        }             
+}
+
+@media screen and (min-width:768px) and (max-width:991px) { 
+    .navbar-dark .navbar-brand {
+        margin-left: 0px;
+    }
+        .iconPadding{
+        padding-left: 21px;
+        padding-top: 20px;
+        display: table;
+        }
+        .iconUserPadding{
+        padding-bottom: 5px;
+        }
+        .iconPaddingHeart{
+        padding-top: 10px;    
+        }
+}
+.navbar-dark .navbar-toggler {
+    border-color: #666666!important;
+}
+.navbar-toggler {
+    background-color: #666666!important;
+    border: 1px solid #666666!important;
+}
+button:focus {  
+    outline: 0px auto -webkit-focus-ring-color!important;
+}

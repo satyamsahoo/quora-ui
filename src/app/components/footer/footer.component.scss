@@ -1,0 +1,125 @@
+/* Custom CSS*/
+footer{
+	padding-top: 270px;
+    background: url("../../../assets/images/footer-background.jpg");
+	background-size: cover;
+	padding-bottom: 30px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.container-fluid{
+    padding: 0px 15%!important;
+}
+h2{
+	color: #fff;
+	font-size: 16px;
+	text-align: left;
+    font-family: 'Montserrat';
+	font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+textarea::placeholder, input::placeholder {
+    color: #06502B!important;
+    font-family: 'Montserrat'!important;
+	font-size: 16px;
+	padding-left: 1px;
+    padding-top: 0px;
+	font-weight: bold!important;
+}
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: white!important;
+    outline: 0;
+    box-shadow: none!important; 
+}
+.form-control{
+    padding-left: 22px!important;
+   
+}
+textarea{
+	border-radius: .25rem;
+	min-width: 100%;
+}
+a{
+	color: #fff;
+    font-family: 'Montserrat';
+	text-align: left;
+}
+.fa-twitter,.fa-facebook,.fa-instagram {
+	color:white;
+	cursor: pointer;
+}
+ul{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	padding-bottom: 30px;
+}
+li{
+	padding: 5px;
+	margin: 0;
+	text-align: left;
+}
+a{
+	padding: 5px;
+	font-size: 16px;
+}
+a:hover{
+	text-decoration: none;
+}
+.contactButton{
+    background: #FFFFFF!important;
+    border: 2px solid #4CBB3B!important;
+    border-radius: 30px!important;
+    color: #06502B!important;
+    font-weight: bold;
+    padding: 4px 20px;
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+.socialMedia{
+	color: #fff;
+    font-family: 'Montserrat';
+	text-align: left;
+	padding-left:8px;
+}
+.marginRight{
+    padding-right: 20px;
+}
+.marginRightTwitter{   
+    padding-left: 15px;
+    padding-right: 20px;
+}
+
+//Media @Queries
+@media(max-width: 767px){
+	footer{
+	position: inherit!important;
+	bottom: 0;
+	width: 100%;
+	}
+}
+
+@media screen and (min-width:768px) and (max-width:991px) { 
+	footer{
+		position: inherit!important;
+		bottom: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:992px) { 
+	footer{
+		position: inherit!important;
+		bottom: 0;
+		width: 100%;
+	}
+}
+
+
+
