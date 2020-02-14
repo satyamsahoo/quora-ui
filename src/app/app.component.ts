@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+// export { ProductListComponent as ɵa } from './app/modules/product-slider/product-list/product-list.component';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

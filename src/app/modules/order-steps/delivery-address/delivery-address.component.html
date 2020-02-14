@@ -1,0 +1,139 @@
+<!-- Delivery Address -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 deliveryAddress">
+
+            <h6 class="mb-3 headingDelivery">Current Delivery Address</h6>
+            <form class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">First name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="address">Address</label>
+                    <textarea class="form-control" id="address" rows="3" cols="20" name="address">
+                </textarea>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="postalCode">Postal Code</label>
+                        <input type="text" class="form-control" id="postalCode" placeholder="" value="">
+
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="landmark">Landmark/Locality</label>
+                        <input type="text" class="form-control" id="landmark" placeholder="" value="">
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="mobileNumber">Mobile Number</label>
+                        <input type="text" class="form-control" id="mobileNumber" placeholder="" value="">
+
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="alternateMobile">Alternate Mobile Number</label>
+                        <input type="text" class="form-control" id="alternateMobile" placeholder="" value="">
+
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-12 mb-3">
+                        <div>
+                            <label for="addressType">Address Type</label>
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+
+                            <input type="radio" class="custom-control-input" id="customRadio1" name="example1">
+                            <label class="custom-control-label addType" for="customRadio1">Home (All day
+                                delivery)</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="customRadio2" name="example2">
+                            <label class="custom-control-label addType" for="customRadio2">Office (10 AM TO 6
+                                PM)</label>
+                        </div>
+
+                        <button class="btn saveDeliver" type="button">
+                            Save & Deliver Here
+                        </button>
+                    </div>
+
+                </div>
+
+                <div id="accordion" class="accordion">
+                    <div class="mb-0">
+                        <div class="collapsed" data-toggle="collapse" href="#collapseAddress">
+                            <h6 class="mb-3 headingAddress">Previously Used Addresses
+                                    &nbsp;&nbsp;<span><i class="fas fa-chevron-circle-down"></i></span>
+                            </h6>
+                          
+                           
+                          
+                        </div>
+                        <div id="collapseAddress" class="collapse" data-parent="#accordion">
+                            <div class="addressBorderBottom"></div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="customRadio1" name="example1">
+                                <label class="custom-control-label" for="customRadio1">Dennis Grand</label>
+
+                            </div>
+                            <p class="prevAddress">
+                                Westzaanstraat 10, 1013 NG Amsterdam, Netherlands<br />
+                                Landmark/Locality: Near gas station<br />
+                                Postal Code: 1013 NG<br />
+                                Mobile Number: +31-207-7977-35/+31-655-5165-45
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        
+        </div>
+  
+        <div class="col-md-4 orderDetails">
+            <h4 class="d-flex justify-content-between align-items-center mb-3 orderDetailBottom">
+                <span class="text-muted headingOrder">Order Details</span>
+                <span class="badge badge-secondary badge-pill orderItems ">2 items</span>
+            </h4>
+            <div class="orderDetailsBottom orderColor">
+                <p>
+                    <b> Name: </b>Tulsi Beyond Balance(Herbal Tea With Medicinal
+                    Benefit)
+                </p>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class=""><b>Price: </b>$8.90</span>
+                    <span class=""><b>Quantity: </b><i class="fas fa-minus-circle"></i>&nbsp;&nbsp;2 &nbsp;&nbsp;<i
+                            class="fas fa-plus-circle"></i></span>
+
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class=""><b>Total Price: </b>$8.90</span>
+                    <span class=""><b>Remove: </b>&nbsp;&nbsp;<i class="fas fa-trash-alt"></i></span>
+                </div>
+            </div>
+
+            <div class="mb-3 floatRight">
+                <p>
+                    <b>+&nbsp;&nbsp; Shipping Cost: </b> <span class="free">Free</span><br />
+                    <b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cart Total:</b> $ 17.80
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</div>

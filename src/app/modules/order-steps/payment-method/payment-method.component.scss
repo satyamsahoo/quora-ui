@@ -1,0 +1,150 @@
+/* Custom CSS */
+.paymentMode{
+    background-color: #F9F9F9;
+    padding: 20px 20px;   
+}
+.headingDelivery{
+    font-weight: bold;
+    color: #4CBB3B;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #C1C1C1;
+}
+.headingAddress{
+    font-weight: bold;
+    color: #4CBB3B;
+    padding-top: 20px;
+}
+textarea::placeholder, input::placeholder {
+    color: #06502B!important;
+    font-family: 'Montserrat'!important;
+	font-size: 14px;
+	padding-left: 1px;
+    padding-top: 0px;
+	font-weight: bold!important;
+}
+.form-control{
+    color: #999999 !important;
+    font-family: "Montserrat"   ;
+    font-weight: bold !important;
+    font-size: 12px!important;;  
+    text-align: center;
+}
+.form-control:focus{
+    box-shadow: none!important;
+}
+
+textarea{
+	border-radius: .25rem;
+	min-width: 100%;
+}
+label {
+    color: #999999;
+    font-weight: bold;
+    font-size: 14px;
+}
+.addType{
+    font-weight: normal!important;   
+}
+.saveDeliver{
+    background-color: #4CBB3B !important;
+    border-radius: 30px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 20px;
+    float: right;
+    margin-top: -8px;
+}
+.prevAddress{
+    padding-left: 24px;
+    font-size: 14px;
+    color: #999999;
+}
+.addressBorderBottom{
+    border-bottom: 1px solid #C1C1C1;
+    margin-bottom: 10px;
+}
+
+.headingOrder{
+    font-weight: bold;
+    color: #4CBB3B!important;
+    font-size: 16px;
+}
+.orderItems{
+    font-size: 14px;
+    padding: 3px 20px 5.5px 20px;
+}
+.orderDetailBottom{
+    border-bottom: 1px solid #C1C1C1; 
+    padding-bottom: 11px; 
+}
+.orderDetails{
+    font-size: 14px;
+    color: #999999;  
+    background-color: #F9F9F9;
+    padding: 20px 20px;
+    margin-left: 30px;
+}
+.orderDetailsBottom{
+    border-bottom: 1px solid #C1C1C1; 
+    
+    margin-bottom: 17px;  
+}
+.free{
+    font-weight: bold;
+    color: #4CBB3B;   
+}
+.floatRight{
+    float:right;
+}
+
+.idealPayment{
+    font-size: 14px;
+    font-weight: bold;
+    color: #999999;   
+}
+.btnPayment{
+    background-color: #4CBB3B !important;
+    border-radius: 30px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 40px;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.btnCard{
+    background-color: #4CBB3B !important;
+    border-radius: 30px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 40px;
+    margin-top: 32px;
+    float: right;
+}
+
+small{
+    color: #999999;
+}
+.year{
+    padding-bottom: 16px;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+.fa, .fas {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+// Media Queries
+@media screen and (max-width:767px){
+    .orderDetails {
+        margin-top: 30px;
+        margin-left:0px;
+    }
+
+}

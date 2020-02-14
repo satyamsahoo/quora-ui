@@ -1,0 +1,430 @@
+/* Custom CSS */
+.productMargin{
+    background-color: #F9F9F9;
+    padding: 30px 60px 30px 60px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#tabs h6.section-title{
+    color: #eee;
+}
+
+a {
+    color:#999999;
+    text-decoration: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+.tabPadding{
+    padding-top: 25px;
+}
+.nav-tabs {
+    border-bottom: 0px solid #dee2e6!important;
+}
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: white;
+    border-color:white!important;
+    border-bottom: 4px solid !important;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px!important;
+    background: #4CBB3B !important;
+    position: relative;
+}
+#tabs .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #eee;
+    font-size: 18px;
+}
+.nav-fill .nav-item {
+    -webkit-box-flex: 0.1!important;
+    flex: .1 0.1 auto!important;
+}
+
+.content{
+    color: #999999;
+    font-size:14px;
+}
+.contentReview{
+    padding-top: 10px;
+    color: #999999;
+    font-size:13px;  
+}
+
+.iconLabel{
+    color: #999999;
+    font-weight: bold;
+    font-size:13px;
+}
+.iconText{
+    color: #999999;
+    font-size:13px;
+}
+.instruction{
+    color: #4CBB3B;
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 10px;
+    padding-top: 7.5px;
+}
+.ingredient{
+    padding-top: 20px;
+    color: #4CBB3B;
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+.form-control{
+    color: #999999 !important;
+    font-family: "Montserrat";
+    font-weight: bold !important;
+    font-size: 12px !important;
+    text-align: center;
+    background-color: #F9F9F9;
+}
+.form-control:focus{
+    box-shadow: none!important;
+}
+button:focus {
+    outline: none!important;
+}
+.starRatingColor{
+    color: #0088FF!important;
+}
+.contentRating{
+    color: #999999;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #e5dddd;
+    font-weight: bold;
+}
+ 
+.cardCustomWidth{
+    padding: 15px 15px 0px 15px;
+    margin-top: 20px;
+}
+.recentReview{
+    border-bottom: 1px solid #e5dddd;  
+    font-weight: bold;
+}
+sup{
+    font-size: 60%!important;
+}
+.btn:focus{
+    box-shadow: none!important;
+    border-color:#ced4da!important;
+    
+}
+.card-body {
+    padding: 6px 0px 0px 0px!important;
+}
+.card-img{
+    display: block;
+    width: 70%;
+    object-fit: scale-down!important;
+    border: none!important;
+}
+.productImg{
+    display: block;
+    width: 70%;
+    object-fit: scale-down!important;
+    border: none!important;
+    margin: auto;
+}
+.productImg1{
+    display: block;
+    object-fit: scale-down!important;
+    border: none!important;
+  
+}
+.productImgMargin{
+    margin-right: 10px;
+}
+.productBorderBottom{
+    border-bottom: 2px solid #4CBB3B!important;
+}
+.listProductImg{
+        display: inline-flex;
+        padding: 0px 15%;
+}
+.card{
+border: 0px solid rgba(0,0,0,.125)!important;
+border-radius: 5px!important;
+box-shadow: 0px 3px 6px #00000029;
+}   
+
+
+.fa {
+    font-size: 12px;
+  }
+
+  
+  .checked {
+    color: orange;
+  }
+  .productHeading{
+    color: #999999;
+    font-family: 'Montserrat'!important;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 0px!important;
+  }
+
+  .starReview, .fivestarReview{
+    color: #999999;
+    font-size: 14px;
+
+  }
+  .fivestarReview{
+    float: right;
+    padding-left: 4px;
+  }
+
+.readMore{
+    text-decoration: none;
+    color: #4CBB3B;
+    font-size: 13px;
+}
+.starColor{
+    color: blue;
+    font-size: 12px;
+    vertical-align: top;
+}
+.reviewMargin{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.progress {
+    height: 10px!important;
+    border-radius: 25px!important;;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+.progress-bar {
+    background-color: #0088FF!important;
+  
+}
+.starNumber{
+    color: #999999;
+    font-size: 12px;
+    margin-bottom: 6.3px;
+    vertical-align: top;
+    margin-top: 1px;
+    padding-top: 1px;
+}
+.rating{
+    color: #999999;
+    font-size: 30px;
+    font-weight: bold;
+}
+.starBottomBorder{
+    border-right: 1px solid #ddd7d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rateReview{
+    background-color: #4CBB3B!important;
+    border-radius: 30px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.productDetail{
+    margin-top: 50px;
+    margin-bottom: 15px;
+    // padding: 20px 20px 15px 20px;
+}
+.productImages, .productDscription {
+    padding: 20px 20px 15px 20px;
+}
+.productHead, .deliveryHeading{
+    color: #4CBB3B;
+    font-weight: bold;
+  }
+  .fa {
+    font-size: 14px;
+  }
+  
+  .checked {
+    color: orange;
+  }
+
+  .starReview, .orderDelivery,.cartPrice, .cartTotalPrice{
+    color: #999999;
+    font-size: 14px;
+  }
+  .priceBottomRight{
+    border-right: 1px solid #ddd7d7;
+    color: #999999;
+    font-size:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+  .priceBrand{
+      margin:25px 0px;
+  }
+  .addToCart {
+    background-color: #c1c1c1 !important;
+    border-radius: 30px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 15px;
+    width: 30%;
+
+}
+.buyNow{
+    background-color: #4CBB3B!important;
+    border-radius: 30px;
+    color: white;
+    font-size: 12px;
+    // float: right; 
+    width: 30%;
+    font-weight: bold;
+}
+.cardButton{
+    margin-top: 20px;
+}
+
+.addToCartTitle, .modalClose{
+    color: #999999;
+    font-weight: bold;
+}
+.modal-content{
+    padding: 0px 20px!important;
+}
+.modal-header {
+    padding: 1rem 0rem!important;
+ 
+}
+.continueShopping{
+    background-color: #c1c1c1 !important;
+    border-radius: 30px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 15px;
+    width: 35%;
+
+}
+.goToCart{
+    background-color: #4CBB3B!important;
+    border-radius: 30px;
+    color: white;
+    font-size: 12px;
+    // float: right; 
+    width: 35%;
+    font-weight: bold;
+}
+.addToCartImg{
+    display: block;
+    // width: 70%;
+    width: 100%;
+    object-fit: scale-down!important;
+    border: none!important;
+    margin: auto;
+}
+.addToCartAdded{
+    margin-bottom: 30px;
+}
+.sizePadding{
+    padding:5px 0px;
+}
+@media screen and (max-width:767px){
+    .listProductImg{
+        display: flex;
+        padding: 0px;
+    }
+    .productImg1{
+        width:30%!important;
+    }
+    
+
+    .priceBottomRight {
+   
+        font-size: 15px;
+     
+      
+    }
+    .addToCart {
+ 
+        margin-right: 15px;
+        width: 55%;
+    
+    }
+    .buyNow{
+     
+        width:55%;
+        margin-top: 15px;
+       
+    }
+}
+@media screen and (min-width:576px) and (max-width:767px){
+    
+#inputState1.form-control {
+    width: auto!important;
+    padding: .375rem .33rem!important;
+}
+
+}
+@media screen and (min-width:767px) and (max-width:991px){
+    .listProductImg{
+        display: flex;
+    padding: 0px;
+ 
+    }
+    .productImg1{
+        width:30%!important;
+    }
+    .addToCart {
+ 
+        margin-right: 15px;
+        width: 40%;
+    
+    }
+    .buyNow{
+     
+        width:40%;
+       
+    }
+    .priceBottomRight {
+   
+        font-size: 15px;
+     
+      
+    }
+  
+}
+
+.nav-link.active:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 19px solid transparent;
+	border-top-color: #4CBB3B;
+	border-bottom: 0;
+	margin-left: -18px;
+	margin-bottom: -18px;
+}
+.nav-link:hover {
+    border-color:transparent;
+}

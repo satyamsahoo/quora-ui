@@ -1,0 +1,95 @@
+/* Custom CSs */
+.productMargin{
+    margin-top:50px;
+    margin-bottom: 50px;
+    background-color: #F9F9F9;
+    padding: 20px 20px 15px 20px;
+}
+.imgProduct  {
+    display: block;
+    width: 100%;
+    object-fit: scale-down!important;
+  }
+  .fa {
+    font-size: 12px;
+  }
+  
+  .checked {
+    color: orange;
+  }
+
+  .productHeading, .shippingCost, .cartTotal, .plus{
+    color: #999999;
+    font-family: 'Montserrat'!important;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .starReview, .orderDelivery,.cartPrice, .cartTotalPrice{
+    color: #999999;
+    font-size: 14px;
+  }
+  .cartPrice, .cartTotalPrice{
+font-weight: bold;
+padding-top: 5px;
+  }
+
+  .stock, .free{
+    color: #4CBB3B;
+    font-weight: bold;
+  }
+  .form-control{
+    color: #999999 !important;
+    font-family: "Montserrat"   ;
+    font-weight: bold !important;
+    font-size: 10px!important;
+    width: 50%!important;;
+}
+.form-control:focus{
+    box-shadow: none!important;
+    border-color:#ced4da!important;
+    
+}
+
+.shoppingCartHeading{
+    color: #4CBB3B;
+    font-weight: bold; 
+    border-bottom: 1px solid #dbd8d8;
+    padding-bottom: 17px;
+    margin-bottom: 30px;
+}
+.cartBorderBottom{
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.borderBottom{
+    margin-bottom:30px;
+    margin-top: 30px;
+}
+.shoppingCardTotal{
+    text-align: center;
+    color: #999999 !important;
+    text-align: right;
+    padding-right: 80px;
+}
+.continueShopping {
+    background-color: #c1c1c1 !important;
+    border-radius: 30px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 15px;
+
+}
+.continueOrder{
+    background-color: #4CBB3B!important;
+    border-radius: 30px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.cardButton{
+    text-align: right;
+    padding-right: 80px;
+    margin-top: 30px;
+}

@@ -1,0 +1,140 @@
+<!-- Paymemnt Method -->
+<div class="container">
+        <div class="row">
+            <div class="col-md-7 paymentMode">
+                <h6 class="mb-3 headingDelivery">Choose Payment Mode</h6>
+                <form class="needs-validation" novalidate>
+                    <div id="accordion" class="accordion addressBorderBottom">
+                        <div class="mb-0 ">
+                            <div class="collapsed" data-toggle="collapse" href="#collapseAddress">
+                                <h6 class="mb-3 idealPayment">
+                                        <img src="../../assets/images/ideal.png" class="imgProduct">
+                                        Ideal payment
+                                        &nbsp;&nbsp;<span>  <i class="fas fa-sort-down"></i></span></h6>
+                            </div>
+                            <div id="collapseAddress" class="collapse" data-parent="#accordion">
+                                    <form>
+                                            <div class="form-row">
+                                             
+                                                <div class="form-group col-md-6">    
+                                                        <label>Choose your bank</label>                                                
+                                                    <select id="inputState1" class="form-control">
+                                                        <option selected>Select</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>                                                                                          
+                                                </div>  
+
+                                                <div class="form-group col-md-3">    
+                                                        <button class="btn btnPayment" type="button">
+                                                                Submit
+                                                            </button>                                               
+                                                </div>
+                                                            
+                                            </div>
+                                      <p ><small>
+                                            You will be redirected to Ideal payment gateway home page to continue payment.
+                                      </small></p>
+                                        </form>
+                                
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div id="accordion1" class="accordion">
+                            <div class="mb-0 ">
+                                <div class="collapsed" data-toggle="collapse" href="#collapseAddress1">
+                                    <h6 class="mb-3 idealPayment">
+                                            <img src="../../assets/images/card.png" class="imgProduct">
+                                            Card payment(Credit/Debit card)
+                                            &nbsp;&nbsp;<span>  <i class="fas fa-sort-down"></i></span></h6>
+                                </div>
+                                <div id="collapseAddress1" class="collapse" data-parent="#accordion1">
+                                        <form>
+                                           
+                <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" class="form-control" id="cardNumber" placeholder="" value="">
+    
+                        </div>
+                    </div>     
+                        <div class="row">
+                                <div class="col-md-3 mb-3">
+                                  <label for="ValidThru">Valid Thru</label>
+                                  <select class="form-control d-block w-100" id="validThru" >
+                                    <option value="" selected>Month</option>
+                                    <option>Jan</option>
+                                    <option>Feb</option>
+                                  </select>
+                                
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                  <label for="year" class="year"> </label>
+                                  <select class="form-control d-block w-100" id="year" >
+                                        <option value="" selected>Year</option>
+                                        <option>2001</option>
+                                        <option>2002</option>
+                                      </select>                 
+                                  
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                  <label for="cvv">CVV</label>
+                                  <input type="text" class="form-control" id="cvv" placeholder="" >
+                              
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                        <button class="btn btnCard" type="button">
+                                                Submit
+                                            </button> 
+                                      </div>
+                              </div>
+
+                                          <p ><small>
+                                                You will be redirected to Ideal payment gateway home page to continue payment.
+                                          </small></p>
+                                            </form>
+                                    
+                                </div>
+        
+                            </div>
+                        </div>
+
+                </form>
+            
+            </div>
+      
+            <div class="col-md-4 orderDetails">
+                <h4 class="d-flex justify-content-between align-items-center mb-3 orderDetailBottom">
+                    <span class="text-muted headingOrder">Order Details</span>
+                    <span class="badge badge-secondary badge-pill orderItems ">2 items</span>
+                </h4>
+                <div class="orderDetailsBottom orderColor">
+                    <p>
+                        <b> Name: </b>Tulsi Beyond Balance(Herbal Tea With Medicinal
+                        Benefit)
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class=""><b>Price: </b>$8.90</span>
+                        <span class=""><b>Quantity: </b><i class="fas fa-minus-circle"></i>&nbsp;&nbsp;2 &nbsp;&nbsp;<i
+                                class="fas fa-plus-circle"></i></span>
+    
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class=""><b>Total Price: </b>$8.90</span>
+                        <span class=""><b>Remove: </b>&nbsp;&nbsp;<i class="fas fa-trash-alt"></i></span>
+                    </div>
+                </div>
+    
+                <div class="mb-3 floatRight">
+                    <p>
+                        <b>+&nbsp;&nbsp; Shipping Cost: </b> <span class="free">Free</span><br />
+                        <b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cart Total:</b> $ 17.80
+                    </p>
+    
+                </div>
+    
+            </div>
+        </div>
+    </div>

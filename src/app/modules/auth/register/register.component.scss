@@ -1,0 +1,161 @@
+/* Custom CSS */
+.productMargin{
+    margin-top:50px;
+    margin-bottom: 50px;
+}
+
+.loginBackground{
+    background: url("../../../../assets/images/login.jpg");
+    height: 600px;
+    border-radius: 15px 0px 0px 15px;
+    position: relative;
+}
+
+.bubble-bg {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    right: -30.5px;
+    bottom: 75%;
+    background: url("../../../../assets/images/login.jpg");
+    border-radius: 15px 0px 0px 15px !important;
+   
+  }
+  
+  .bubble-bg:before,
+  .bubble-bg:after {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    right: 0px;
+    height: 50%;
+    border: 30px solid transparent;
+    border-right-color: #fff;
+  }
+  
+  .bubble-bg:before {
+    top: 0;
+    border-top: 0;
+  }
+  
+  .bubble-bg:after {
+    bottom: 0;
+    border-bottom: 0;
+  }
+
+.teaLogo{
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.teaLogo img{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin:auto; 
+}
+hr{
+    margin-top: 30px;
+    margin-bottom:25px!important;
+    border: 0;
+    border-top: 2px solid white!important;
+    width: 30%;
+    font-weight: bold;
+}
+
+.logoText{
+   color: #FFFFFF !important;
+   text-align: center;
+}
+
+.LoginForm{
+    border-radius: 0px 15px 15px 0px;
+    border: 1px solid #f3f2f2;
+    padding: 25px 70px 25px 70px;
+    box-shadow: 0px 3px 6px #00000029;
+    height:600px;
+    border-left:none;
+}
+
+.loginDetail{
+    margin-top: 10px;
+}
+
+.loginHeading, .email, .password{
+color: #999999;
+}
+
+.logIn{
+    color: #4CBB3B;
+    font-weight: bold;
+}   
+.account{
+    text-align: center;
+    padding-top: 110px;
+    color: #999999;
+}
+.form-control{
+    border-bottom: 1px solid #ced4da!important;
+    border-top: none!important;
+    border-right: none!important;
+    border-left: none!important;
+    border-radius: 0px!important;
+    padding: 0px!important; 
+    line-height: 0px!important; 
+}
+
+label{
+    margin-bottom: 0px!important;    
+}
+.form-control:focus{
+box-shadow: none!important;
+}
+.loginButton {
+    background-color: #4CBB3B !important;
+    border-radius: 30px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Montserrat" !important;
+    margin-top: 25px;
+    display: block;
+    margin: auto;
+    padding: 5px 25px;
+}
+.signUp{
+    color: #999999;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top:70px;
+}
+#basic-addon2, #basic-addon3{
+    color: #999999;
+    background-color: white;
+    border-bottom: 1px solid #ced4da !important;
+    border: none;
+    border-radius: none!important;
+    border-radius: 0px;
+    padding:0px;
+  }
+
+  //Media Queries
+  @media screen and (max-width:767px){
+    .productMargin{
+        padding: 0px 50px;
+    }
+  }
+  @media screen and (max-width:991px){
+    .account {
+        padding-top: 60px;
+    }
+}
+@media screen and (min-width:320px) and (max-width:567px){
+    .account{
+        text-align: center;
+        padding-top: 20px;
+        color: #999999;
+        font-size: 12px;
+    }
+    
+}

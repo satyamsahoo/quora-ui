@@ -1,0 +1,40 @@
+<!-- Login -->
+<div class="container productMargin">
+    <div class="row">
+        <div class="col-md-6 loginBackground">
+            <div class="bubble-bg"></div>
+            <div class="teaLogo">
+                <img src="../../../../assets/images/login_logo.png">
+                <hr class="logoBottomBorder">
+                <p class="logoText">A cup of tea would restore normally</p>
+            </div>
+        </div>
+        <div class="col-md-6 LoginForm">
+            <h4 class="logIn">Log In</h4>
+            <div class="loginHeading">
+                Fill in fields below to continue...
+            </div>
+            <form class="loginDetail">
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="email">Email </label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class="password">Password</label>
+                    <div class="input-group mx-auto">
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">
+                                <i class="far fa-eye-slash"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn loginButton" [routerLink]="['/login']" >Log In</button>
+            </form>
+            <div class="account">
+                Dont't have an account? <a href="#" class="signUp"  [routerLink]="['/register']" >Sign Up</a>
+            </div>
+        </div>
+    </div>
+</div>

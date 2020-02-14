@@ -4,9 +4,6 @@ footer{
     background: url("../../../assets/images/footer-background.jpg");
 	background-size: cover;
 	padding-bottom: 30px;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
 }
 .container-fluid{
     padding: 0px 15%!important;
@@ -94,31 +91,6 @@ a:hover{
 .marginRightTwitter{   
     padding-left: 15px;
     padding-right: 20px;
-}
-
-//Media @Queries
-@media(max-width: 767px){
-	footer{
-	position: inherit!important;
-	bottom: 0;
-	width: 100%;
-	}
-}
-
-@media screen and (min-width:768px) and (max-width:991px) { 
-	footer{
-		position: inherit!important;
-		bottom: 0;
-		width: 100%;
-	}
-}
-
-@media screen and (max-width:992px) { 
-	footer{
-		position: inherit!important;
-		bottom: 0;
-		width: 100%;
-	}
 }
 
 

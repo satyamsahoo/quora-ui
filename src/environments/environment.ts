@@ -20,27 +20,27 @@
 // The list of file replacements can be found in `angular.json`.
 import { APIOptions } from '../app/helpers/http-helper.class';
 
-// const protocol = 'http';
-// const host = 'localhost';
-// const port = '4000';
-// const trailUrl = 'api';
-// const payUrl = 'pay';
-
-// const hostUrl = `${protocol}://${host}${port ? ':' + port : ''}`;
-// const endpoint = `${hostUrl}/${trailUrl}`;
-// // const endpoint = `http://35.232.130.57/${trailUrl}`;
-// const payendpoint = `http://35.232.130.57/${payUrl}`;
-//const host = 'http://preprod.grocery.conaug.com';
-
 const protocol = 'http';
-const host = 'groceryapp.conaug.com';
-const port = '';
+const host = 'localhost';
+const port = '4001';
 const trailUrl = 'api';
 const payUrl = 'pay';
 
 const hostUrl = `${protocol}://${host}${port ? ':' + port : ''}`;
 const endpoint = `${hostUrl}/${trailUrl}`;
-const payendpoint =  `${hostUrl}/${payUrl}`;
+// const endpoint = `http://35.232.130.57/${trailUrl}`;
+const payendpoint = `http://35.232.130.57/${payUrl}`;
+//const host = 'http://preprod.grocery.conaug.com';
+
+// const protocol = 'http';
+// const host = 'groceryapp.conaug.com';
+// const port = '';
+// const trailUrl = 'api';
+// const payUrl = 'pay';
+
+// const hostUrl = `${protocol}://${host}${port ? ':' + port : ''}`;
+// const endpoint = `${hostUrl}/${trailUrl}`;
+// const payendpoint =  `${hostUrl}/${payUrl}`;
 
 export const ENVIRONMENT = {
   production: false,

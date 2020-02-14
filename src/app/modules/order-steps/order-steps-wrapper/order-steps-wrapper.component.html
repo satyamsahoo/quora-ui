@@ -1,0 +1,39 @@
+<!-- Order Steps -->
+<div class="container orderStepsMargin">
+        <div class="row ">
+                <div class="col-sm-12 orderStepsWrapper">
+                    <nav>
+                        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                                aria-controls="nav-home" aria-selected="true" >
+                                <img src="../../assets/images/delivery_icon.png"  class="imgProduct delivery">
+                                <span class="verticalAlign">1. Delivery Address</span></a>
+                            <a class="nav-item nav-link "  id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                                aria-controls="nav-profile" aria-selected="false">
+                                <img src="../../assets/images/payment_icon.png" class="imgProduct pay">
+                                <span class="verticalAlign">2. Payment </span>  
+                            </a>
+                            <a class="nav-item nav-link " id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+                                aria-controls="nav-contact" aria-selected="false"> 
+                                <img src="../../assets/images/confirmation_icon.png"  class="imgProduct pay">
+                                <span class="verticalAlign">3. Confirmation</span></a>
+                        </div>
+                    </nav>
+                    <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                        <div class="tab-pane fade show tabPadding active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                              <app-delivery-address></app-delivery-address>
+                        </div>
+                        <div class="tab-pane tabPadding fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                              <app-payment-method></app-payment-method>
+                        </div>
+                        <div class="tab-pane tabPadding fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <app-order-confirmation></app-order-confirmation>
+                        </div>
+        
+                    </div>
+        
+                </div>
+            </div>
+</div>
+
+
