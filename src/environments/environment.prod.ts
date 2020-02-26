@@ -6,7 +6,7 @@
 // The list of file replacements can be found in `angular.json`.
 import { APIOptions } from '../app/helpers/http-helper.class';
 
-const protocol = 'http';
+const protocol = 'https';
 const host = 'groceryapp.conaug.com';
 const port = '';
 const trailUrl = 'api';

@@ -4,13 +4,13 @@ export interface PageProps {
   route: string;
 }
 
-export const Page: { [s: string]: PageProps } = {
-  signin: {
-    routeName: 'login',
-    route: '/login'
-  },
-  signup: {
-    routeName: 'register',
-    route: '/register'
-  }
-};
+// export const Page: { [s: string]: PageProps } = {
+//   signin: {
+//     routeName: 'login',
+//     route: '/login'
+//   },
+//   signup: {
+//     routeName: 'register',
+//     route: '/register'
+//   }
+// };

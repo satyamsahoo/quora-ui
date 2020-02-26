@@ -2,7 +2,7 @@
 <div class="container productMargin">
     <div class="card-deck ">
         <div class="card mb-3 cardCustomWidth">
-                <img src="../../assets/images/advertisement1.png" class="card-img">
+            <img src="../../assets/images/advertisement1.png" class="card-img">
             <!-- <div class="row no-gutters">
                 <div class="col-md-4">
                     <img src="../../assets/images/adv_2.png" class="card-img">
@@ -17,7 +17,7 @@
             </div> -->
         </div>
         <div class="card mb-3 cardCustomWidth">
-                <img src="../../assets/images/advertisement2.jpg" class="card-img">
+            <img src="../../assets/images/advertisement2.jpg" class="card-img">
             <!-- <div class="row no-gutters">
                 <div class="col-md-4">
                     <img src="../../assets/images/adv_2.png" class="card-img">
@@ -32,7 +32,7 @@
             </div> -->
         </div>
         <div class="card mb-3 cardCustomWidth">
-                <img src="../../assets/images/advertisement3.jpg" class="card-img">
+            <img src="../../assets/images/advertisement3.jpg" class="card-img">
             <!-- <div class="row no-gutters">
                 <div class="col-md-4">
                     <img src="../../assets/images/adv_3.png" class="card-img">
@@ -53,7 +53,7 @@
 <app-banner-list></app-banner-list>
 
 <!-- Search Filter -->
-    <div class="selectFilter">
+<div class="selectFilter">
     <form>
         <div class="form-row">
             <div class="form-group  col-md-2">
@@ -80,12 +80,218 @@
                     <option>Brand3</option>
                 </select>
             </div>
-      
+
         </div>
     </form>
 </div>
 
-<!-- Product List -->
-<div class="productList">
-        <app-product-list></app-product-list>
+<!-- Product Search List  -->
+<div class="container">
+    <div class="row productSearchMargin">
+        <div class="col-sm-3 col-md-3" *ngFor="let product of productsSearchData">
+            <div class="card cardBorder">
+                <div class="card-header searchImgMargin" (click)='specificProduct(product)'>
+                    <!-- <img src="../../assets/images/9.png" class="imgProduct" > -->
+                    <img [src]="product.images[0].liveURL? product.images[0].path : urlprefix + '/' + product.images[0].path"
+                        class="searchImg">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"
+                        style=" width:auto;font-weight:bold;padding-bottom: 37px;overflow: hidden; display:-webkit-box; -webkit-line-clamp:2!important; -webkit-box-orient: vertical;">
+                        {{product.productName}} </h5>
+                    <div class="card-text">
+                        <span
+                            style=" width:auto;margin-bottom:5px; overflow: hidden; display:-webkit-box; -webkit-line-clamp:1!important; -webkit-box-orient: vertical;">
+                            Brand: {{product.brand.brandName}} </span></div>
+                    <div class="card-text">Strength:
+                        <span>
+                            <i class="fas fa-leaf fa-lg marginRight"></i>
+                            <i class="fas fa-leaf fa-lg marginRight">
+                            </i>
+                            <i class="fas fa-leaf fa-lg marginRight"></i>
+
+                            <i class="fas fa-leaf fa-lg marginRight"></i>
+                            <i class="fas fa-leaf fa-lg marginRight"></i>
+                        </span>
+                    </div>
+                    <div class="card-text productPrice">Price: $ {{product.finalPrice | number : '1.2-2'}}</div>
+                    <div class="cardButton">
+                        <button class="btn addToBag" type="button" (click)="addToCart(product)">
+                            <i class="fas fa-shopping-bag fa-lg"></i>&nbsp;&nbsp;Add to bag
+                        </button>
+                        <button class="btn quickBuy" type="button" (click)="quickBuyPopup()">Quick Buy
+                        </button>
+                    </div>
+                </div>
+                <div class="numberCircle">30 % OFF
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- quickBuypopup Modal-->
+<div bsModal #quickBuypopup="bs-modal" class="modal fade " tabindex="-1" role="dialog" aria-labelledby=""
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close modalClose" data-toggle="modal" (click)="hideQuickBuyPopup()">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row productDetail">
+                        <div class="col-sm-6 col-md-6">
+                            <img src="../../assets/images/main_product_detail.png" class="productImg">
+                            <div class="listProductImg flex-container">
+                                <img src="../../assets/images/product_det1.png"
+                                    class="productImg1 productImgMargin productBorderBottom">
+                                <img src="../../assets/images/product_det2.png" class="productImg1 productImgMargin">
+                                <img src="../../assets/images/product_det3.png" class="productImg1 ">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 ">
+                            <h4 class="productHead">Tulsi Beyond Balance(Herbal Tea With Medicinal Benefit)</h4>
+                            <div class="starReview">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp;&nbsp;&nbsp;1,091 ratings | 274 reviews
+                            </div>
+                            <div class="row priceBrand">
+                                <div class="col-sm-3 priceBottomRight">
+                                    <div class="price">$ 8.90</div>
+                                </div>
+                                <div class="col-sm-9 BrandSold">
+                                    <div class="content"><b>Brand:</b> The Republic of Tea</div>
+                                    <div class="content"><b>Sold by: </b>Dreamhouse Tea Dealers</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <select id="inputState1" class="form-control">
+                                            <option selected>Size - 50grams | 25-30 Servings</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <select class="custom-select form-control" id="quantity">
+                                            <option value="" selected>Quantity - 1</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="deliveryHeading">Delivery Details:</h6>
+                                <div class="content">
+                                    <b><i class="fas fa-asterisk"></i>&nbsp; &nbsp;Delivery time: </b>Normally delivered
+                                    in 2-3 business days.
+                                </div>
+                                <div class="content">
+                                    <b><i class="fas fa-asterisk"></i>&nbsp; &nbsp;Shipping charges: </b>Free delivery
+                                    all around the Netherlands.
+                                </div>
+
+                            </div>
+
+                            <p class="cardButton">
+
+                                <button class="btn buyNow" type="button" (click)="orderNowPopup()">
+                                    <i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;Order Now
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!-- orderNowpopup Modal-->
+<div bsModal #orderNowpopup="bs-modal" class="modal fade orderPopupWidth " tabindex="-1" role="dialog"
+    aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close modalClose" data-toggle="modal" (click)="hideorderNowPopup()">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row productDetail">
+                        <div class="col-sm-6 text-center orderRightBorder">
+                            <img src="../../assets/images/Tulsi_Beyond_Balance1.png" class="productOrderNow">
+                            <h4 class="productHead">Tulsi Beyond Balance(Herbal Tea With Medicinal Benefit)</h4>
+                            <div class="starReview">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>&nbsp;&nbsp;&nbsp;1,091 ratings | 274 reviews
+                            </div>
+                            <hr class="orderBottomBorder">
+                            <div class="d-flex justify-content-between align-items-center mb-3 orderNow">
+                                <span class=""><b>Size: </b>50grams | 25-30 Servings </span>
+                                <span class=""><b>Price: </b> $ 8.90</span>
+
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-3 orderNow">
+                                <form class="form-inline">
+                                    <label for="quantity"><b>Quantity:&nbsp;&nbsp; </b></label>
+                                    <div class="form-group">
+
+                                        <select class="custom-select form-control" id="quantity">
+                                            <option value="" selected> 1</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
+
+                                    </div>
+
+                                </form>
+
+
+                                <span class=""><b>Total Price: </b>$17.80</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 text-center btnPositionRelative ">
+
+                            <div class="btnPosition">
+                                <button class="btn loginExistingButton" type="button">
+                                    Login with existing account
+                                </button>
+                                <div class="orderOption">
+                                    <h5>OR </h5>
+                                </div>
+                                <button class="btn loginGuest" type="button">
+                                    Login as guest
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>

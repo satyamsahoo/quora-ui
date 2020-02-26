@@ -88,6 +88,7 @@ export class CartService extends HttpHelper {
 
   // addProductToCart
   addProductToCart(data: { productId: number; quantity: number }): Observable<any> {
+    console.log('data', data);
     return this.http.post(this.apiUrl + '/cart/add', data, this.getHttpOptions({ cartInstance: true }));
   }
   // getcartallData

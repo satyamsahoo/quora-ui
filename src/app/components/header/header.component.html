@@ -1,37 +1,57 @@
 <!-- Header -->
-<header>
-        <nav class="navbar navbar-expand-lg navbar-dark static-top teaNavbar">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="../../assets/images/tea-logo.png" class="teaLogo">
-                    </a>
-                    <div class="input-group">
-                        <input class="form-control py-2 border-right-0 border" type="text" placeholder="Search products..."
-                            id="example-search-input">
-                        <span class="input-group-append">
-                            <div class="input-group-text bg-transparent"><i class="fa fa-search fa-lg"></i></div>
-                        </span>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarResponsive">
-                        <ul class="navbar-nav menuBar">
-                            <li class="nav-item menuLink">
-                                <a class="nav-link" href="#">About Us
-                                    <span class="sr-only"></span>
-                                </a>
-                            </li>
-                            <li class="nav-item menuLink">
-                                <a class="nav-link" href="#">Tea Stories</a>
-                            </li>
-                        </ul>  
+        <header>
+                <nav class="navbar navbar-expand-lg navbar-dark static-top teaNavbar">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="javascript:void(0)" [routerLink]="['search']" >
+                            <img src="../../assets/images/tea-logo.png" class="teaLogo">
+                        </a>
+                        <div class="input-group">
+                            <input class="form-control py-2 border-right-0 border" type="text" placeholder="Search products..."
+                                id="example-search-input">
+                            <span class="input-group-append">
+                                <div class="input-group-text bg-transparent"><i class="fa fa-search fa-lg"></i></div>
+                            </span>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarResponsive">
+                            <ul class="navbar-nav menuBar">
+                                <li class="nav-item menuLink">
+                                    <a class="nav-link" href="javascript:void(0)" >About Us
+                                        <span class="sr-only"></span>
+                                    </a>
+                                </li>
+                                <li class="nav-item menuLink">
+                                    <a class="nav-link" href="javascript:void(0)" [routerLink]="['tea-stories']">Tea Stories</a>
+                                </li>
+                            </ul>
+                            <span *ngIf="authState?.is_logged_in">
                                 <i class="fas fa-heart fa-lg marginRightHeart iconPaddingHeart"></i>
-                                <i class="fas fa-shopping-bag fa-lg marginRight iconPadding"></i>
+                            </span>
+                            <i (click)="openCartPopup()" class="fas fa-shopping-bag fa-lg marginRight iconPadding" 
+                            [ngClass]="('authState.is_logged_in==false')?'marginLeft':''" ></i>
+                            <span >  
+                                <i  mat-button *ngIf="authState?.is_logged_in" class="fas fa-user-circle fa-lg iconPadding iconUserPadding" [matMenuTriggerFor]="settingMenu">
+                                    <mat-menu #settingMenu="matMenu"  yPosition="below">
+                                        <!-- <button mat-menu-item class="menuItem" id="profileBtn" name="profileclick"  >Profile</button> -->
+                                        <button (click)="logOut()" mat-menu-item class="menuItem" id="logoutBtn" name="logoutclick" >Logout</button>
+                                    </mat-menu>
+                                </i>
+                            </span > 
+                     
+                            <a *ngIf="!authState || !authState?.is_logged_in" href="javascript:void(0)" [routerLink]="['login']">
                                 <i class="fas fa-user fa-lg iconPadding iconUserPadding"></i>
-                            
+                            </a>
+            
+                        </div>
                     </div>
-                </div>
-            </nav>
-</header>
+                </nav>
+            
+               <div class="teaBackgriound">
+                   <h6 class="teaHeading">TEA</h6>
+                   <p class="teaContent">Cherish the day with a nice fresh cup of tea...</p>
+               </div> 
+            </header>
+

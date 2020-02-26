@@ -2,15 +2,25 @@
 <div class="container">
     <div class="row productDetail">
         <div class="col-sm-6 col-md-6 productImages">
-            <img src="../../assets/images/main_product_detail.png" class="productImg">
-            <div class="listProductImg flex-container">
+            <!-- <img src="../../assets/images/main_product_detail.png" class="productImg"> -->
+            <img [src]="liveURL? productImg : urlprefix + '/' + productImg" class="productImg">
+            <!-- <div class="listProductImg flex-container">
                 <img src="../../assets/images/product_det1.png" class="productImg1 productImgMargin productBorderBottom">
                 <img src="../../assets/images/product_det2.png" class="productImg1 productImgMargin">
                 <img src="../../assets/images/product_det3.png" class="productImg1 ">
+            </div> -->
+
+            <div class="listProductImg flex-container">
+                <div *ngFor="let slideimg of slideImg" class="slideImgWidthHeight" id="imgspecprodId"
+                    name="imgspecprodName">
+                    <img [ngClass]="(slideimg.id==selectedSlideId)?'slideImgWidthHeightYellow':'slideImgWidthHeightGrey'"
+                        [src]="slideimg.liveURL? slideimg.path : urlprefix + '/' + slideimg.path" class="detailImg"
+                        id="clickimgprodId" name="clickimgprodName" (click)="imgClicked(slideimg.id,slideimg, $event)">
+                </div>
             </div>
         </div>
         <div class="col-sm-6 col-md-6 productDscription ">
-            <h4 class="productHead">Tulsi Beyond Balance(Herbal Tea With Medicinal Benefit)</h4>
+            <h4 class="productHead">{{productName}}</h4>
             <div class="starReview">
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
@@ -20,10 +30,10 @@
             </div>
             <div class="row priceBrand">
                 <div class="col-sm-3 priceBottomRight">
-                    <div class="price">$ 8.90</div>
+                    <div class="price">$ {{price | number : '1.2-2'}}</div>
                 </div>
                 <div class="col-sm-9 BrandSold">
-                    <div class="content"><b>Brand:</b> The Republic of Tea</div>
+                    <div class="content"><b>Brand:</b> {{brandName}}</div>
                     <div class="content"><b>Sold by: </b>Dreamhouse Tea Dealers</div>
                 </div>
             </div>
@@ -51,84 +61,90 @@
             <div>
                 <h6 class="deliveryHeading">Delivery Details:</h6>
                 <div class="content">
-                        <b><i class="fas fa-asterisk"></i>&nbsp; &nbsp;Delivery time: </b>Normally delivered in 2-3 business days.
+                    <b><i class="fas fa-asterisk"></i>&nbsp; &nbsp;Delivery time: </b>Normally delivered in 2-3 business
+                    days.
                 </div>
                 <div class="content">
-                        <b><i class="fas fa-asterisk"></i>&nbsp; &nbsp;Shipping charges: </b>Free delivery all around the Netherlands. 
-                    </div>
-               
+                    <b><i class="fas fa-asterisk"></i>&nbsp; &nbsp;Shipping charges: </b>Free delivery all around the
+                    Netherlands.
+                </div>
+
             </div>
 
             <p class="cardButton">
-                    <button class="btn addToCart" type="button" (click)="addToCartPopup()">
-                            <i class="fas fa-shopping-bag fa-lg"></i>&nbsp;&nbsp; Add to cart
-                    </button>
-                    <button class="btn buyNow" type="button" (click)="order()">
-                            <i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;Buy now
-                    </button>
-                </p>
-                <div bsModal #addtocartpopup="bs-modal" class="modal fade deletePopup" tabindex="-1" role="dialog"
+                <button class="btn addToCart" type="button" (click)="addToCartPopup()">
+                    <i class="fas fa-shopping-bag fa-lg"></i>&nbsp;&nbsp; Add to cart
+                </button>
+                <button class="btn buyNow" type="button" (click)="order()">
+                    <i class="fas fa-thumbs-up"></i>&nbsp;&nbsp;Buy now
+                </button>
+            </p>
+            <div bsModal #addtocartpopup="bs-modal" class="modal fade deletePopup" tabindex="-1" role="dialog"
                 aria-labelledby="" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title addToCartTitle">
-                            Product added to cart
-                      </h5>
-  
-                      <button type="button" class="close modalClose" data-toggle="modal" (click)="hideaddToCartPopup()">
-                        &times;
-                      </button>
-                    </div>
-  
-                    <div class="modal-body">
-                        
-                                <div class="row addToCartAdded">
-                                        <div class="col-sm-4">
-                                            <img src="../../assets/images/Tulsi_Beyond_Balance.png" class="addToCartImg">                                  
-                                        </div>
-                                        <div class="col-sm-8">
-                                                <h6 class="productHead">Tulsi Beyond Balance(Herbal Tea With Medicinal Benefit)</h6>
-                                                <div class="starReview">
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>&nbsp;&nbsp;&nbsp;1,091 ratings | 274 reviews
-                                                </div>
-                                                <div class="priceCal">
-                                                        <div class="content sizePadding"><b>Size: </b>50grams | 25-30 Servings</div>
-                                                        <div class="content">
-                                                        <b>Price: </b>$ 8.90 &nbsp;&nbsp;
-                                                        <span><b>*</b></span>&nbsp;&nbsp;
-                                                        <span><b>Quantity: </b>2</span>&nbsp;&nbsp;
-                                                        <span><b>=</b></span>&nbsp;&nbsp;
-                                                        <span><b>Total Price: $ 17.80</b></span>
-                                                        </div>
-                                                    
-                                                </div>
-                                            </div>
-                                    
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title addToCartTitle">
+                                Product added to cart
+                            </h5>
+
+                            <button type="button" class="close modalClose" data-toggle="modal"
+                                (click)="hideaddToCartPopup()">
+                                &times;
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="row addToCartAdded">
+                                <div class="col-sm-4">
+                                    <!-- <img src="../../assets/images/Tulsi_Beyond_Balance.png" class="addToCartImg"> -->
+                                    <img [src]="liveURL? productImg : urlprefix + '/' + productImg" class="addToCartImg">
+                                </div>
+                                <div class="col-sm-8">
+                                    <h6 class="productHead">{{productName}}</h6>
+                                    <div class="starReview">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>&nbsp;&nbsp;&nbsp;1,091 ratings | 274
+                                        reviews
                                     </div>
-                                    <div class="content"><i class="fas fa-plus-square"></i>&nbsp;&nbsp;<b>Note:</b> Plus 1 more product already in cart.</div>
-                        
-                             
+                                    <div class="priceCal">
+                                        <div class="content sizePadding"><b>Size: </b>50grams | 25-30 Servings</div>
+                                        <div class="content">
+                                            <b>Price: </b>$ {{price | number : '1.2-2'}} &nbsp;&nbsp;
+                                            <span><b>*</b></span>&nbsp;&nbsp;
+                                            <span><b>Quantity: </b>2</span>&nbsp;&nbsp;
+                                            <span><b>=</b></span>&nbsp;&nbsp;
+                                            <span><b>Total Price: $ 17.80</b></span>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="content"><i class="fas fa-plus-square"></i>&nbsp;&nbsp;<b>Note:</b> Plus 1 more
+                                product already in cart.</div>
+
+
+                        </div>
+
+                        <div class="modal-footer buttonMargin">
+                            <button type="button" class="btn continueShopping" data-dismiss="modal"
+                            (click)="continueShopping()" >
+                                Continue shopping
+                            </button>
+                            <button type="button" class="btn goToCart" data-toggle="modal"
+                            (click)="goToCart()" >
+                                Go to cart
+                            </button>
+                        </div>
                     </div>
-  
-                    <div class="modal-footer buttonMargin">
-                        <button type="button" class="btn continueShopping" data-dismiss="modal"
-                          >
-                          Continue shopping
-                        </button>
-                        <button type="button" class="btn goToCart" data-toggle="modal"
-                          >
-                          Go to cart
-                        </button>
-                    </div>
-                  </div>
                 </div>
-              </div>
-               
+            </div>
+
 
         </div>
     </div>
@@ -137,20 +153,21 @@
             <nav>
                 <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
-                        aria-controls="nav-home" aria-selected="true" >Description</a>
-                    <a class="nav-item nav-link "  id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
-                        aria-controls="nav-profile" aria-selected="false">5         
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                           
+                        aria-controls="nav-home" aria-selected="true">Description</a>
+                    <a class="nav-item nav-link " id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                        aria-controls="nav-profile" aria-selected="false">5
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+
                     </a>
                 </div>
             </nav>
             <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-                <div class="tab-pane fade show tabPadding active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="tab-pane fade show tabPadding active" id="nav-home" role="tabpanel"
+                    aria-labelledby="nav-home-tab">
                     <p class="content">
                         Tulsi is a herb that has been worshiped for centuries across the Indian subcontinent. The plant
                         is known as Holy Basil in the west and seems to live up to its sacred status possessing a great
@@ -199,7 +216,8 @@
                     <p class="content">Organic Tulsi, Organic Lemon Myrtle, Organic Ginger, Organic Peppermint, Organic
                         Pepper, Organic Cinnamon Pepper</p>
                 </div>
-                <div class="tab-pane tabPadding fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="tab-pane tabPadding fade" id="nav-profile" role="tabpanel"
+                    aria-labelledby="nav-profile-tab">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="d-flex justify-content-between align-items-center recentReview">

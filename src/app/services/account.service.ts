@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {HttpHelper} from '../helpers/http-helper.class';
 import {Observable} from 'rxjs';
-import {AuthService} from '../guard/auth.service';
+import { AuthService } from '../modules/auth/auth.service';
+
 
 // Enum
 export enum OrderStatus {

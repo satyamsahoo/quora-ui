@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import {MatStepperModule} from '@angular/material/stepper';
+import { MatMenuModule } from '@angular/material/menu';
 import {
   MatInputModule,
   MatPaginatorModule,
@@ -9,7 +10,7 @@ import {
   MatButtonModule,
   MatCardModule,
   MatGridListModule,
-  MatSliderModule
+  MatSliderModule,
 } from '@angular/material';
 
 const MaterialComponents = [
@@ -22,7 +23,8 @@ const MaterialComponents = [
   MatCardModule,
   MatGridListModule,
   MatSliderModule,
-  MatStepperModule
+  MatStepperModule,
+  MatMenuModule
 ]
 
 

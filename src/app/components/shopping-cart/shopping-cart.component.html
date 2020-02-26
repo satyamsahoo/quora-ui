@@ -1,12 +1,13 @@
 <!-- Shopping Cart -->
 <div class="container productMargin">
     <h6 class="shoppingCartHeading">Shopping Cart</h6>
-    <ul class="list-unstyled row  list-group-flush">
-        <li class="list-item col-sm-2">
-            <img src="../../assets/images/shopping_cart1.png" class="imgProduct">
+    <ul class="list-unstyled row  list-group-flush" *ngFor="let cartdata of cartData; let i = index">
+        <li class="list-item col-sm-2"  (click)="onClickview(cartdata.product._id)">
+            <!-- <img src="../../assets/images/shopping_cart1.png" class="imgProduct"> -->
+            <img class="productImgWidthHeight" id="cartImg"[src]="cartdata.product.images[0].liveURL? cartdata.product.images[0].path : urlprefix + '/' + cartdata.product.images[0].path + ''" />
         </li>
         <li class="list-item col-sm-4">
-            <h6 class="productHeading">Tulsi Beyond Balance(Herbal Tea With Medicinal Benefit)</h6>
+            <h6 class="productHeading"  (click)="onClickview(cartdata.product._id)">{{ cartdata.product.productName }}</h6>
             <div class="starReview">
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
@@ -32,7 +33,7 @@
         </li>
         <li class="list-item col-sm-2">
             <h6 class="productHeading">Price</h6>
-            <div class="cartPrice"> $8.90</div>
+            <div class="cartPrice"> ${{cartdata.product.finalPrice | number:'1.2-2'}}</div>
 
         </li>
         <li class="list-item col-sm-2">
@@ -42,7 +43,7 @@
         </li>
     </ul>
     <hr class="borderBottom">
-    <ul class="list-unstyled row  list-group-flush">
+    <!-- <ul class="list-unstyled row  list-group-flush">
         <li class="list-item col-sm-2">
             <img src="../../assets/images/shopping_cart2.png" class="imgProduct">
         </li>
@@ -81,17 +82,17 @@
             <div class="cartTotalPrice"> $17.80</div>
 
         </li>
-    </ul>
-    <hr class="cartBorderBottom">
+    </ul> -->
+    <!-- <hr class="cartBorderBottom"> -->
     <p class="shoppingCardTotal">
         <span class="shippingCost">Shipping Cost: </span> <span class="free">Free</span>
         <span class="plus"> + </span> <span class="cartTotal">Cart Total: </span> $ 35.80
     </p>
         <p class="cardButton">
-            <button class="btn continueShopping" type="button">
+            <button class="btn continueShopping" type="button" (click)="continueShopping()">
                 Continue to Shopping
             </button>
-            <button class="btn continueOrder" type="button">Continue to Order
+            <button class="btn continueOrder" type="button" (click)="continueOrder()">Continue to Order
             </button>
         </p>
 </div>

@@ -7,7 +7,7 @@ import { OrderConfirmationComponent } from './order-confirmation/order-confirmat
 
 
 const routes: Routes = [
-  { path: 'order-steps-wrapper', component: OrderStepsWrapperComponent},
+  { path: 'order-steps', component: OrderStepsWrapperComponent},
   { path: 'deliver-address', component: DeliveryAddressComponent},
   { path: 'payment-method', component: PaymentMethodComponent},
   { path: 'order-confirmation', component: OrderConfirmationComponent}

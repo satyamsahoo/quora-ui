@@ -7,7 +7,6 @@ export const AppSettings = Object.freeze({
     cartInstance: 'cartInstance',
     currentCurrency: 'currentCurrency',
     availableAPIKeys: 'availableAPIKeys',
-    discardedAPIKeys: 'discardedAPIKeys',
-    rememberMe: 'rememberMe',
+    discardedAPIKeys: 'discardedAPIKeys'
   }
 });

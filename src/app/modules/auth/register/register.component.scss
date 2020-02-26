@@ -92,6 +92,11 @@ color: #999999;
 }   
 .account{
     text-align: center;
+    padding-top: 20px;
+    color: #999999;
+}
+.account1{
+    text-align: center;
     padding-top: 110px;
     color: #999999;
 }
@@ -137,6 +142,9 @@ box-shadow: none!important;
     border-radius: none!important;
     border-radius: 0px;
     padding:0px;
+  }
+  button:focus {
+    box-shadow: none;
   }
 
   //Media Queries

@@ -52,13 +52,14 @@ export class ProductService extends HttpHelper {
   //getProducts
   getProducts(): Observable<any> {
     let params = new HttpParams();
-    // params = params.append('limit', '50');
+    params = params.append('limit', '10');
     params = params.append('skip', '0');
     return this.http.get(this.apiUrl + '/products/', { params });
   }
 
   //getspecificProduct
   getspecificProduct(data: { [key: string]: any }): Observable<any> {
+    console.log('data', data);
     return this.http.get(this.apiUrl + '/products/specific?id=' + data, {});
   }
 

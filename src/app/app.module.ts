@@ -9,17 +9,19 @@ import { MaterialModule } from './modules/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { BannerModule } from './modules/banner/banner.module';
 
 import { SearchComponent } from './components/search/search.component';
 import { ProductSliderModule } from './modules/product-slider/product-slider.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { OwlModule } from 'ngx-owl-carousel';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { ModalModule } from 'ngx-bootstrap';
 
 import { OrderStepsModule } from './modules/order-steps/order-steps.module';
+import { TeaStoriesComponent } from './components/tea-stories/tea-stories.component';
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import { OrderStepsModule } from './modules/order-steps/order-steps.module';
     FooterComponent,
     SearchComponent,
     ShoppingCartComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    TeaStoriesComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,9 @@ import { OrderStepsModule } from './modules/order-steps/order-steps.module';
     ProductSliderModule,
     AppRoutingModule,
     ModalModule.forRoot(),
+    HttpClientModule,
     AuthModule,
+    OwlModule,
     OrderStepsModule
 
   ],

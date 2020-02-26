@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient , HttpHeaders} from '@angular/common/http';
 import { APIRoute } from './api.routes';
 import { HttpHelper,HTTPRESPONSE } from '../helpers/http-helper.class';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,9 +14,9 @@ export class HomeService extends HttpHelper{
 
   // Get Brands
   getBrands() {
-    return this.http.get(APIRoute.getBrands());
+    return this.http.get(APIRoute.getBrands(), this.getHttpOptions());
   }
-
+ 
   // getCategoriesdata
   getCategoriesdata() {
     return this.http.get(APIRoute.getCategories());

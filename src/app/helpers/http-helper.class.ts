@@ -8,6 +8,7 @@ export interface CustomHttpHeaderOptions {
   errorMessage?: boolean;
   token?: boolean;
   X_Lang?: boolean;
+  teaApp?: boolean;
   cartInstance?: boolean;
   additionalParams?: Array<{ name: string; value: string }>;
 }
@@ -48,7 +49,7 @@ export class HttpHelper {
     headers = headers.append('Authorization', localStorage.getItem(AppSettings.localStorage_keys.token) || 'Bearer ');
     headers = headers.append('Accept', 'application/json');
     headers = headers.append('ipAddress', ENVIRONMENT.API.host);
-
+    headers = headers.append('x-ecomm-org', 'tea-app');
     if (options && options.loader === false) {
       headers = headers.append('InterceptorNoLoader', '');
     }
@@ -64,7 +65,7 @@ export class HttpHelper {
     if (options && options.cartInstance === true) {
       headers = headers.append('cartInstance', localStorage.getItem(AppSettings.localStorage_keys.cartInstance));
     }
-
+  
     if (options && options.hasOwnProperty('additionalParams')) {
       options.additionalParams.map(param => {
         headers = headers.append(param.name, param.value);

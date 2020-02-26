@@ -137,6 +137,23 @@ sup{
     object-fit: scale-down!important;
     border: none!important;
 }
+.slideImgWidthHeight img{
+    height: 82px;
+    padding: 10px 0px;
+    object-fit: scale-down;
+    
+  }
+  .slideImgWidthHeightGrey {
+    border-bottom: 2px solid #4CBB3B!important;
+  }
+  .slideImgWidthHeightYellow {
+    border-bottom: 2px solid #4CBB3B!important;
+  }
+  .detailImg{
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
 .productImg{
     display: block;
     width: 70%;
@@ -150,6 +167,7 @@ sup{
     border: none!important;
   
 }
+
 .productImgMargin{
     margin-right: 10px;
 }
@@ -270,7 +288,7 @@ box-shadow: 0px 3px 6px #00000029;
   .priceBottomRight{
     border-right: 1px solid #ddd7d7;
     color: #999999;
-    font-size:30px;
+    font-size:28px;
     display: flex;
     justify-content: center;
     align-items: center;

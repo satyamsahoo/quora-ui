@@ -1,4 +1,14 @@
 // Make default navbar links display block at choosen breakpoint and adjust styles to fit...
+
+header{
+    background: url("../../../assets/images/clouds.png");
+    height: 100vh;
+    padding-bottom: 100vh;
+    background-size: cover;
+    position: relative;
+
+}
+
 .teaLogo{
     max-width:60px;
 }
@@ -12,9 +22,12 @@
 .marginRight{
     padding-right: 20px;
 }
+.marginLeft{
+    padding-left:10px;
+}
 .marginRightHeart{   
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 10px;
 }
 .form-control:focus{
     outline: 0 !important;
@@ -50,14 +63,15 @@
 .menuBar{
     margin-left: 25px;
 }
-.fa-heart:hover,.fa-shopping-bag:hover,.fa-user:hover {
+.fa-heart:hover,.fa-shopping-bag:hover,.fa-user:hover, .fa-user-circle:hover {
     color: #4CBB3B;
     -ms-transform: scale(1.5); /* IE 9 */
     -webkit-transform: scale(1.5); /* Safari 3-8 */
     transform: scale(1.5); 
 }
-.fa-heart,.fa-shopping-bag,.fa-user,.fa-search {
+.fa-heart,.fa-shopping-bag,.fa-user,.fa-search, .fa-user-circle{
     color: #666666;
+    cursor: pointer;
 }
 .navbar-dark .navbar-brand {
     margin-left: 50px;
@@ -119,4 +133,26 @@
 }
 button:focus {  
     outline: 0px auto -webkit-focus-ring-color!important;
+}
+
+.teaHeading{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: white;
+    font-size: 60px;
+}
+.teaContent{
+    color: white;
+    color: white;
+    font-size:30px;
+    font-weight: bold;
+}
+
+
+.teaBackgriound{
+    top: 55%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

@@ -14,41 +14,65 @@
             <div class="loginHeading">
                 Fill in fields below to continue...
             </div>
-            <form class="loginDetail">
+            <form [formGroup]="signupForm" class="loginDetail"  (ngSubmit)="onSubmit()">
                 <div class="form-group">
                     <label for="exampleInputName" class="email">Name </label>
-                    <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                    <input type="text" class="form-control"  name="registerUserName" formControlName='registerUserName'  id="registerUserName" 
+                     [ngClass]="{ 'is-invalid': submitted && signUp.registerUserName.errors }" required >
+                    <div *ngIf="submitted && signUp.registerUserName.errors" class="invalid-feedback">
+                        <div *ngIf="signUp.registerUserName.errors.required">Name is required</div>       
+                      </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1" class="email">Email </label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" name="email" formControlName='email'  id="email" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && signUp.email.errors }" required>
+                    <div *ngIf="submitted && signUp.email.errors" class="invalid-feedback" > 
+                        <div *ngIf="signUp.email.errors.required">Email is required</div>
+                        <div *ngIf="signUp.email.errors.email">
+                          Email must be a valid email address
+                        </div>
+                      </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1" class="password">Password</label>
                     <div class="input-group mx-auto">
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                        <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">
-                                <i class="far fa-eye-slash"></i>
+                        <input [type]="showPassword ? 'text' : 'password'"  class="form-control" name="password" formControlName='password' id="password"
+                        [ngClass]="{ 'is-invalid': submitted && signUp.password.errors }" required>
+                        <div class="input-group-append" >
+                            <span class="input-group-text" id="basic-addon2" (click)="password()" name="hidePassword">
+                                <i [ngClass]="showPassword ? 'far fa-eye' : 'far fa-eye-slash'" ></i>
                             </span>
                         </div>
+                        <div *ngIf="submitted && signUp.password.errors" class="invalid-feedback" >
+                            <div *ngIf="signUp.password.errors.required">Password is required</div>
+                            <div *ngIf="signUp.password.errors.minlength">Password must be at least 6 characters</div>
+                        </div>
                     </div>
+                   
                 </div>
                 <div class="form-group">
                         <label for="exampleconfirmPassword1" class="password">Confirm Password</label>
                         <div class="input-group mx-auto">
-                            <input type="password" class="form-control" id="exampleconfirmPassword1">
+                            <input [type]="showConfirmPassword ? 'text' : 'password'" class="form-control" name="confirmPassword" formControlName='confirmPassword' id="confirmPassword"
+                            [ngClass]="{ 'is-invalid': submitted && signUp.confirmPassword.errors }" required>
                             <div class="input-group-append">
-                                <span class="input-group-text" id="basic-addon3">
-                                    <i class="far fa-eye-slash"></i>
+                                <span class="input-group-text" id="basic-addon3" (click)="confirmPassword()" name="hideConfirmPassword">
+                                    <i [ngClass]="showConfirmPassword ? 'far fa-eye' : 'far fa-eye-slash'" ></i>
                                 </span>
                             </div>
+                            <div *ngIf="submitted && signUp.confirmPassword.errors" class="invalid-feedback">
+                                <div *ngIf="signUp.confirmPassword.errors.required">Confirm Password is required</div>
+                                <div *ngIf="signUp.confirmPassword.errors.minlength">Confirm Password must be at least 6 characters</div>
+                                <div *ngIf="signUp.confirmPassword.errors.mustMatch">Passwords must match</div>
+                              </div>
                         </div>
+                     
                     </div>
-                <button type="submit" class="btn loginButton">Sign Up</button>
+                <button type="submit" class="btn loginButton" id="registerButton" name="registerButton">Sign Up</button>
             </form>
-            <div class="account">
-                Already have an account? <a href="#" class="signUp">Log In</a>
+            <div [ngClass]="(submitted==true)?'account':'account1'" >
+                Already have an account? <a  href="javascript:void(0)" class="signUp" [routerLink]="['/login']" id="logIn" name="logIn">Log In</a>
             </div>
         </div>
     </div>
